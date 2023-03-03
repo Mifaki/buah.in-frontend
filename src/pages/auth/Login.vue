@@ -45,6 +45,7 @@
             round
             v-model="username"
             class="q-mt-sm"
+            :rules="[(val) => !!val]"
           />
           <p
             class="jakarta-sb q-mb-none q-px-sm q-mt-md"
@@ -57,6 +58,7 @@
             outlined
             v-model="password"
             :type="isPwd ? 'password' : 'text'"
+            c
           >
             <template v-slot:append>
               <q-icon
@@ -129,8 +131,8 @@ export default {
         password: this.password,
       };
       console.log(userData);
-    }
-  }
+    },
+  },
 };
 </script>
 

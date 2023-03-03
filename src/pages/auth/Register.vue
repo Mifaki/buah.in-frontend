@@ -52,7 +52,7 @@
               round
               v-model="username"
               class="q-mt-sm"
-              for="username"
+              :rules="[(val) => !!val]"
             />
             <p
               class="jakarta-sb q-mb-none q-px-sm q-mt-md"
@@ -64,12 +64,10 @@
               class="q-mt-sm"
               outlined
               v-model="password"
-              for="password"
               :type="isPwd ? 'password' : 'text'"
               :rules="[
-                (val) =>
-                  val.length <= 8 ||
-                  'Password maksimial terdiri dari 8 karakter',
+                (val) => !!val,
+                (val) => val.length <= 8 || 'Password maksimial terdiri dari 8 karakter',
               ]"
             >
               <template v-slot:append>
@@ -91,7 +89,7 @@
               round
               v-model="email"
               class="q-mt-sm"
-              for="username"
+              :rules="[(val) => !!val]"
             />
             <p
               class="jakarta-sb q-mb-none q-px-sm q-mt-md"
@@ -104,7 +102,7 @@
               round
               v-model="telepon"
               class="q-mt-sm"
-              for="username"
+              :rules="[(val) => !!val]"
             />
             <q-btn
               class="jakarta-b q-mt-xl q-mb-md"
