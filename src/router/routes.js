@@ -19,7 +19,8 @@ const routes = [
     component: () => import('layouts/header.vue'),
     children: [
       { path: '', name:'Home', component: () => import('pages/Home.vue') },
-      { path: 'fruit-id', name:'FruitID', component: () => import('pages/FruitID.vue') }
+      { path: 'fruit-id', name:'FruitID', component: () => import('pages/FruitID.vue') },
+      { path: 'kategori', name:'Kategori', component: () => import('pages/Kategori.vue') }
     ]
   },
 
