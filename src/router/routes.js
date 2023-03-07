@@ -14,6 +14,14 @@ const routes = [
       { path: '', component: () => import('pages/auth/Register.vue') }
     ]
   },
+  {
+    path: '/home',
+    component: () => import('layouts/header.vue'),
+    children: [
+      { path: '', name:'Home', component: () => import('pages/Home.vue') },
+      { path: 'fruit-id', name:'FruitID', component: () => import('pages/FruitID.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it

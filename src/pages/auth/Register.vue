@@ -1,24 +1,9 @@
 <template>
   <q-layout view="hHh lpR fF2">
     <q-page class="main-page column items-center">
-      <div
-        class="logo q-mt-lg"
-        style="
-          width: 312px;
-          height: 70px;
-          background-color: #d9d9d9;
-          border-radius: 15px;
-        "
-      ></div>
+      <q-img class="q-mt-lg" src="icons/logo.png" style="width: 322px; height: 72px;"/>
       <div class="row justify-evenly q-mt-xl" style="width: 100%">
-        <div
-          style="
-            width: 496px;
-            height: 791px;
-            background-color: #d9d9d9;
-            border-radius: 15px;
-          "
-        />
+        <q-img src="icons\resgistration.png" style="width: 581px; height: 624px;"/>
         <div class="register-form">
           <P
             class="jakarta-sb q-mb-none q-mt-xl"
@@ -50,7 +35,7 @@
             <q-input
               outlined
               round
-              v-model="username"
+              v-model="Username"
               class="q-mt-sm"
               :rules="[(val) => !!val]"
             />
@@ -63,11 +48,13 @@
             <q-input
               class="q-mt-sm"
               outlined
-              v-model="password"
+              v-model="Password"
               :type="isPwd ? 'password' : 'text'"
               :rules="[
                 (val) => !!val,
-                (val) => val.length <= 8 || 'Password maksimial terdiri dari 8 karakter',
+                (val) =>
+                  val.length <= 8 ||
+                  'Password maksimial terdiri dari 8 karakter',
               ]"
             >
               <template v-slot:append>
@@ -87,7 +74,7 @@
             <q-input
               outlined
               round
-              v-model="email"
+              v-model="Email"
               class="q-mt-sm"
               :rules="[(val) => !!val]"
             />
@@ -100,7 +87,7 @@
             <q-input
               outlined
               round
-              v-model="telepon"
+              v-model="noTelp"
               class="q-mt-sm"
               :rules="[(val) => !!val]"
             />
@@ -121,7 +108,9 @@
             />
           </q-form>
           <div class="row items-center justify-center">
-            <P class="jakarta-sb q-mb-none q-mx-xs">Dengan mendaftar saya menyetujui</P>
+            <P class="jakarta-sb q-mb-none q-mx-xs"
+              >Dengan mendaftar saya menyetujui</P
+            >
             <q-btn
               flat
               label="Syarat dan Ketentuan"
@@ -145,6 +134,8 @@
 </template>
 
 <script>
+// import { Notify } from 'quasar'
+import axios from "axios";
 import { ref } from "vue";
 
 export default {
@@ -152,25 +143,44 @@ export default {
 
   data() {
     return {
-      username: ref(null),
-      password: ref(null),
+      Username: ref(null),
+      Password: ref(null),
       isPwd: ref(true),
-      email: ref(null),
-      telepon: ref(null),
+      Email: ref(null),
+      noTelp: ref(null),
     };
   },
 
   methods: {
     submit() {
       const userData = {
-        username: this.username,
-        password: this.password,
-        email: this.email,
-        telepon: this.telepon
+        Username: this.Username,
+        Password: this.Password,
+        Email: this.Email,
+        noTelp: this.noTelp,
       };
       console.log(userData);
-    }
-  }
+      // console.log(res);
+      // axios.post('http://localhost:8080/signup', userData)
+      // .then((res) =>{
+      // })
+        // if(res.data.error) {
+        //   this.$q.notify({
+        //     color: 'negative',
+        //     message: res.data.msg,
+        //     icon: 'ion-close'
+        //   })
+        // } else {
+        //   this.$q.notify({
+        //     color: 'positive',
+        //     message: res.data.msg,
+        //     icon: 'ion-close'
+        //   })
+        //   this.$router.push('/')
+        // }
+
+    },
+  },
 };
 </script>
 
