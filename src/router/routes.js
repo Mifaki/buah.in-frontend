@@ -22,7 +22,7 @@ const routes = [
       { path: '', name:'Home', component: () => import('pages/Home.vue') },
       { path: 'fruit-id', name:'FruitID', component: () => import('pages/FruitID.vue') },
       { path: 'kategori', name:'Kategori', component: () => import('pages/Kategori.vue') },
-      { path: 'checkout', name:'Checkout', component: () => import('pages/Checkout.vue') }
+      { path: 'cart', name:'cart', component: () => import('src/pages/Cart.vue') }
     ]
   },
 

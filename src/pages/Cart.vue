@@ -105,7 +105,7 @@ const rows = [
 ]
 
 export default {
-  name: 'Checkout',
+  name: 'Cart',
 
   setup() {
     return {
