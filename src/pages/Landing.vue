@@ -106,19 +106,21 @@ const columns = [
   {
     name: 'name',
     required: true,
-    label: 'Dessert (100g serving)',
     align: 'left',
     field: row => row.name,
     format: val => `${val}`,
     sortable: true
   },
-  { name: 'calories', align: 'center', label: 'Calories', field: 'calories', sortable: true },
-  { name: 'fat', label: 'Fat (g)', field: 'fat', sortable: true },
-  { name: 'carbs', label: 'Carbs (g)', field: 'carbs' },
-  { name: 'protein', label: 'Protein (g)', field: 'protein' },
-  { name: 'sodium', label: 'Sodium (mg)', field: 'sodium' },
-  { name: 'calcium', label: 'Calcium (%)', field: 'calcium', sortable: true },
-  { name: 'iron', label: 'Iron (%)', field: 'iron', sortable: true }
+  { name: 'price', required: true, field: 'price', sortable: true },
+  { name: 'thumbnail', required: true, field: 'thumbnail', sortable: true },
+  { name: 'price', required: true, field: 'price', sortable: true },
+  { name: 'discount', required: true, field: 'discount', sortable: true },
+  { name: 'city', required: true, field: 'city' },
+  { name: 'rating', required: true, field: 'rating' },
+  { name: 'kondisi', required: true, field: 'kondisi' },
+  { name: 'berat',required: true, field: 'berat', sortable: true },
+  { name: 'desc', required: true, field: 'desc', sortable: true },
+  { name: 'stock', required: true, field: 'stock', sortable: true }
 ]
 
 const rows = [
