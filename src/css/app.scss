@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "jakarta-b";
-  font-weight:700;
+  font-weight: 700;
   src: url("../../fonts/PlusJakartaSans-Bold.woff") format("woff");
 }
 
@@ -28,23 +28,27 @@
   src: url("../../fonts/PlusJakartaSans-ExtraBold.woff") format("woff");
 }
 
-  // declare a class which applies it
-  .jakarta-r {
-    font-family: 'jakarta-r';
-  }
+// declare a class which applies it
+.jakarta-r {
+  font-family: 'jakarta-r';
+}
 
-  .jakarta-md {
-    font-family: 'jakarta-md';
-  }
+.jakarta-md {
+  font-family: 'jakarta-md';
+}
 
-  .jakarta-sb {
-    font-family: 'jakarta-sb';
-  }
+.jakarta-sb {
+  font-family: 'jakarta-sb';
+}
 
-  .jakarta-b {
-    font-family: 'jakarta-b';
-  }
+.jakarta-b {
+  font-family: 'jakarta-b';
+}
 
-  .jakarta-xb {
-    font-family: 'jakarta-xb';
-  }
+.jakarta-xb {
+  font-family: 'jakarta-xb';
+}
+
+$circle-1 : #DBD24D !important;
+$circle-2 : #F7982D !important;
+$circle-3 : #FFDB61 !important;

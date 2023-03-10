@@ -271,6 +271,7 @@ export default {
 }
 
 .card {
+  max-width: 202px;;
   min-height: 398px;
 }
 
