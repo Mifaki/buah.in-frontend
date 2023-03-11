@@ -13,11 +13,16 @@
           <p class="jakarta-sb q-mb-none q-px-sm q-mt-xl" style="font-size: 16px; color: #116530">
             Username
           </p>
-          <q-input outlined round v-model="username" class="q-mt-sm" :rules="[(val) => !!val]" />
+          <q-input outlined round v-model="email" class="q-mt-sm" :rules="[(val) => !!val]" />
           <p class="jakarta-sb q-mb-none q-px-sm q-mt-md" style="font-size: 16px; color: #116530">
-            Password
+            Email
           </p>
-          <q-input class="q-mt-sm" outlined v-model="password" :type="isPwd ? 'password' : 'text'" c>
+          <q-input class="q-mt-sm" outlined v-model="password" :type="isPwd ? 'password' : 'text'" :rules="[
+            (val) => !!val,
+            (val) =>
+              val.length <= 10 ||
+              'Password maksimial terdiri dari 8 karakter',
+          ]">
             <template v-slot:append>
               <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd = !isPwd" />
             </template>
@@ -27,12 +32,12 @@
             <q-btn flat label="Lupa Kata Sandi?" no-caps style="color: #58936e" size="16px" />
           </div>
           <q-btn class="jakarta-b q-mt-xl q-mb-md" type="submit" unelevated style="
-                  background: #116530;
-                  width: 100%;
-                  height: 56px;
-                  border-radius: 15px;
-                  font-size: 24px;
-                " label="Masuk" text-color="white" no-caps />
+                    background: #116530;
+                    width: 100%;
+                    height: 56px;
+                    border-radius: 15px;
+                    font-size: 24px;
+                  " label="Masuk" text-color="white" no-caps />
         </q-form>
         <div class="row items-center justify-center">
           <p class="jakarta-sb q-mb-none q-pa-none">Butuh Bantuan?</p>
@@ -44,14 +49,16 @@
 </template>
 
 <script>
-import { ref, VueElement } from "vue";
+import { api } from "src/boot/axios";
+import { ref } from "vue";
 
 export default {
   name: "Login",
 
   data() {
     return {
-      username: ref(null),
+      // username: ref(null),
+      email: ref(null),
       password: ref(null),
       isPwd: ref(true),
       orange: ref(false),
@@ -59,12 +66,16 @@ export default {
   },
 
   methods: {
-    submit() {
+    async submit() {
       const userData = {
-        username: this.username,
+        email: this.email,
         password: this.password,
       };
-      console.log(userData);
+      await api.post('/api/login', userData).then((response) => {
+        console.log(response);
+      }).catch((error) => {
+        console.log(error);
+      })
     },
   },
 };
