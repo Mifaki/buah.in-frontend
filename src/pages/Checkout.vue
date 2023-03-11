@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <div class="container row justify-center">
+    <!-- <div class="container row justify-center">
       <div class="left-container">
         <p class="q-mb-none q-mb-md">Checkout</p>
         <p class="q-mb-none">Alamat Pengiriman</p>
@@ -9,7 +9,7 @@
         <p class="q-mb-none q-mb-sm">081335510629</p>
         <p class="q-mb-none q-mb-sm">081335510629</p>
       </div>
-    </div>
+    </div> -->
   </q-page>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style>
-.container {
+/* .container {
   margin-top: 60px;
 }
 
@@ -32,5 +32,5 @@ export default {
   width: 685px;
   height: 2px;
   background-color: #D9D9D9;
-}
+} */
 </style>

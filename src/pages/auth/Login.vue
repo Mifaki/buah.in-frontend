@@ -1,20 +1,20 @@
 <template>
   <q-layout view="hHh lpR fF2">
     <q-page class="main-page column items-center">
-      <q-img src="icons/logo.png" style="width: 322px; height: 72px;" />
+      <q-img src="icons/logo.png" class="logo" />
       <div class="login-form">
         <div class="row justify-between items-end q-px-sm" style="margin-top: 176px">
-          <p class="jakarta-sb q-mb-none" style="font-size: 36px">Masuk</p>
-          <p class="jakarta-sb q-mb-none" style="font-size: 24px; color: #58936e">
+          <p class="title jakarta-sb q-mb-none">Masuk</p>
+          <p class="daftar-text jakarta-sb q-mb-none">
             Daftar
           </p>
         </div>
         <q-form @submit="submit">
-          <p class="jakarta-sb q-mb-none q-px-sm q-mt-xl" style="font-size: 16px; color: #116530">
+          <p class="label jakarta-sb q-mb-none q-px-sm q-mt-xl">
             Username
           </p>
           <q-input outlined round v-model="email" class="q-mt-sm" :rules="[(val) => !!val]" />
-          <p class="jakarta-sb q-mb-none q-px-sm q-mt-md" style="font-size: 16px; color: #116530">
+          <p class="label jakarta-sb q-mb-none q-px-sm q-mt-md">
             Email
           </p>
           <q-input class="q-mt-sm" outlined v-model="password" :type="isPwd ? 'password' : 'text'" :rules="[
@@ -28,20 +28,14 @@
             </template>
           </q-input>
           <div class="row justify-between items-end q-mt-lg">
-            <q-checkbox size="55px" v-model="orange" label="Ingat Saya" />
-            <q-btn flat label="Lupa Kata Sandi?" no-caps style="color: #58936e" size="16px" />
+            <q-checkbox size="55px" v-model="orange" label="Ingat Saya" class="jakarta-sb" />
+            <q-btn flat label="Lupa Kata Sandi?" no-caps size="16px" class="label-text " />
           </div>
-          <q-btn class="jakarta-b q-mt-xl q-mb-md" type="submit" unelevated style="
-                    background: #116530;
-                    width: 100%;
-                    height: 56px;
-                    border-radius: 15px;
-                    font-size: 24px;
-                  " label="Masuk" text-color="white" no-caps />
+          <q-btn class="masuk-button jakarta-b q-mt-xl q-mb-md" type="submit" unelevated label="Masuk" text-color="white" no-caps  />
         </q-form>
         <div class="row items-center justify-center">
           <p class="jakarta-sb q-mb-none q-pa-none">Butuh Bantuan?</p>
-          <q-btn flat label="Hubungi Buah.in Care" no-caps style="color: #58936e" class="q-pa-none" />
+          <q-btn flat label="Hubungi Buah.in Care" no-caps  class="text-button q-pa-none" />
         </div>
       </div>
     </q-page>
@@ -95,5 +89,38 @@ export default {
   padding: 0 44px;
   border-radius: 25px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  width: 322px;
+  height: 72px;
+}
+
+.title {
+  font-size: 36px;
+  color: #323741;
+}
+
+.daftar-text {
+  font-size: 24px;
+  color: #58936e
+}
+
+.label {
+  font-size: 16px;
+  color: #116530
+}
+
+.label-text,
+.text-button {
+  color: #58936e
+}
+
+.masuk-button {
+  background: #116530;
+  width: 100%;
+  height: 56px;
+  border-radius: 15px;
+  font-size: 24px;
 }
 </style>

@@ -1,25 +1,25 @@
 <template>
   <q-layout view="hHh lpR fF2">
     <q-page class="main-page column items-center">
-      <q-img class="q-mt-lg" src="icons/logo.png" style="width: 322px; height: 72px;" />
-      <div class="row justify-evenly q-mt-xl" style="width: 100%">
-        <q-img src="icons\resgistration.png" style="width: 581px; height: 624px;" />
+      <q-img class="logo q-mt-lg" src="icons/logo.png" />
+      <div class="row justify-evenly q-mt-xl">
+        <q-img src="icons\resgistration.png" class="ilustration" />
         <div class="register-form">
-          <P class="jakarta-sb q-mb-none q-mt-xl" style="font-size: 36px; text-align: center">Daftar Sekarang</P>
+          <P class="title jakarta-sb q-mb-none q-mt-xl">Daftar Sekarang</P>
           <div class="row items-center justify-center">
-            <P class="jakarta-r q-mb-none" style="font-size: 24px; text-align: center">Sudah punya akun Buah.in?</P>
-            <q-btn flat label="Masuk" no-caps style="color: #58936e" class="q-pa-none" size="28px" />
+            <P class="sub jakarta-r text-center q-mb-none">Sudah punya akun Buah.in?</P>
+            <q-btn flat label="Masuk" no-caps class="green q-pa-none" size="28px" />
           </div>
           <q-form @submit.prevent="submit">
             <!-- <p class="jakarta-sb q-mb-none q-px-sm q-mt-xl" style="font-size: 16px; color: #116530">
               Username
             </p>
             <q-input outlined round v-model="name" class="q-mt-sm" :rules="[(val) => !!val]" /> -->
-            <p class="jakarta-sb q-mb-none q-px-sm" style="font-size: 16px; color: #116530">
+            <p class="label jakarta-sb q-mb-none q-px-sm">
               Email
             </p>
             <q-input outlined round v-model="email" class="q-mt-sm" :rules="[(val) => !!val]" />
-            <p class="jakarta-sb q-mb-none q-px-sm q-mt-md" style="font-size: 16px; color: #116530">
+            <p class="label jakarta-sb q-mb-none q-px-sm q-mt-md">
               Password
             </p>
             <q-input class="q-mt-sm" outlined v-model="password" :type="isPwd ? 'password' : 'text'" :rules="[
@@ -36,19 +36,14 @@
               Nomor Telepon
             </p> -->
             <!-- <q-input outlined round v-model="noTelp" class="q-mt-sm" :rules="[(val) => !!val]" /> -->
-            <q-btn class="jakarta-b q-mt-xl q-mb-md" type="submit" unelevated style="
-                      background: #116530;
-                      width: 100%;
-                      height: 56px;
-                      border-radius: 15px;
-                      font-size: 24px;
-                    " label="Daftar" text-color="white" no-caps />
+            <q-btn class="button jakarta-b q-mt-xl q-mb-md" type="submit" unelevated label="Daftar" text-color="white"
+              no-caps />
           </q-form>
           <div class="row items-center justify-center">
             <P class="jakarta-sb q-mb-none q-mx-xs">Dengan mendaftar saya menyetujui</P>
-            <q-btn flat label="Syarat dan Ketentuan" no-caps style="color: #58936e" class="q-pa-none" />
+            <q-btn flat label="Syarat dan Ketentuan" no-caps class="green q-pa-none" />
             <P class="jakarta-sb q-mb-none q-mx-xs">serta</P>
-            <q-btn flat label="Kebijakan Privasi" no-caps style="color: #58936e" class="q-pa-none" />
+            <q-btn flat label="Kebijakan Privasi" no-caps class="green q-pa-none" />
           </div>
         </div>
       </div>
@@ -106,5 +101,45 @@ export default {
   background-color: white;
   padding: 0 24px;
   border-radius: 25px;
+}
+
+.logo {
+  width: 322px;
+  height: 72px;
+}
+
+.layout {
+  width: 100%;
+}
+
+.ilustration {
+  width: 581px;
+  height: 624px;
+}
+
+.title {
+  font-size: 36px;
+  text-align: center
+}
+
+.sub {
+  font-size: 24px;
+}
+
+.green {
+  color: #58936e;
+}
+
+.label {
+  font-size: 16px;
+  color: #116530
+}
+
+.button {
+  background: #116530;
+  width: 100%;
+  height: 56px;
+  border-radius: 15px;
+  font-size: 24px;
 }
 </style>

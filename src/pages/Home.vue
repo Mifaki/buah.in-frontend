@@ -67,27 +67,28 @@
 
 const columns = [
   {
-    name: 'name',
+    name: 'id',
     required: true,
-    align: 'left',
-    field: row => row.name,
+    field: row => row.id,
     format: val => `${val}`,
     sortable: true
   },
+  { name: 'name', required: true, field: 'name', sortable: true },
+  { name: 'thumbnail', required: true, field: 'thumbnail', sortable: false },
   { name: 'price', required: true, field: 'price', sortable: true },
-  { name: 'thumbnail', required: true, field: 'thumbnail', sortable: true },
-  { name: 'price', required: true, field: 'price', sortable: true },
-  { name: 'discount', required: true, field: 'discount', sortable: true },
-  { name: 'city', required: true, field: 'city' },
-  { name: 'rating', required: true, field: 'rating' },
-  { name: 'kondisi', required: true, field: 'kondisi' },
-  { name: 'berat',required: true, field: 'berat', sortable: true },
-  { name: 'desc', required: true, field: 'desc', sortable: true },
-  { name: 'stock', required: true, field: 'stock', sortable: true }
+  { name: 'discount', required: false, field: 'discount', sortable: true },
+  { name: 'city', required: true, field: 'city', sortable: true },
+  { name: 'rating', required: true, field: 'rating', sortable: false },
+  { name: 'sold', required: true, field: 'sold', sortable: true },
+  { name: 'kondisi', required: true, field: 'kondisi', sortable: true },
+  { name: 'berat',required: true, field: 'berat', sortable: false },
+  { name: 'desc', required: true, field: 'desc', sortable: false },
+  { name: 'stock', required: true, field: 'stock', sortable: false }
 ]
 
 const rows = [
   {
+    id: '1',
     name: 'Alpukat Mentega',
     thumbnail: 'img:icons/home/alpukat-mentega.png',
     price: 25200,
@@ -101,6 +102,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '2',
     name: 'Alpukat',
     thumbnail: 'img:icons/home/alpukat.png',
     price: 280000,
@@ -113,6 +115,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '3',
     name: 'Apel Malang',
     thumbnail: 'img:icons/home/apel-malang.png',
     price: 11000,
@@ -123,6 +126,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '4',
     name: 'Durian Bawor',
     thumbnail: 'img:icons/home/durian-bawor.png',
     price: 80000,
@@ -133,6 +137,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '5',
     name: 'Durian Candimulyo',
     thumbnail: 'img:icons/home/durian-candimulyo.png',
     price: 25000,
@@ -145,6 +150,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '6',
     name: 'Durian Merah Banyuwangi',
     thumbnail: 'img:icons/home/durian-merah.png',
     price: 135000,
@@ -158,6 +164,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '6',
     name: 'Jambu Biji',
     thumbnail: 'img:icons/home/jambu-biji.png',
     price: 15000,
@@ -168,6 +175,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '7',
     name: 'Pisang Cavendish',
     thumbnail: 'img:icons/home/pisang.png',
     price: 9000,
@@ -180,6 +188,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '8',
     name: 'Rambutan',
     thumbnail: 'img:icons/home/rambutan.png',
     price: 9000,
@@ -193,6 +202,7 @@ const rows = [
     stock: 20,
   },
   {
+    id: '9',
     name: 'Semangka',
     thumbnail: 'img:icons/home/semangka.png',
     price: 7000,

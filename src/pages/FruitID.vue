@@ -80,6 +80,7 @@ export default {
   name: 'FruitID',
   data() {
     return {
+      id: '4',
       name: 'Durian Bawor',
       thumbnail: ['img:icons/home/durian-bawor.png', 'img:icons/home/durian-bawor-2.png', 'img:icons/home/durian-bawor-3.png',],
       price: 80000,
