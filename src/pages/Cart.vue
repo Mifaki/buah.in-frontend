@@ -31,7 +31,7 @@
           </template>
         </q-table>
       </div>
-      <q-card class="card q-py-md q-px-xl" flat>
+      <q-card class="card q-py-md q-px-xl">
         <p class="name-text jakarta-sb q-mb-none">Ringkasan Belanja</p>
         <div class="q-mt-md">
           <div class="row justify-between">
